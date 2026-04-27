@@ -3,71 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastián Villegas | Portafolio</title>
+    <title>svillegas ~ terminal</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --bg: #f8fafc;
-            --text: #1e293b;
+            --bg: #09090b;
+            --text: #a1a1aa;
+            --white: #f4f4f5;
+            --accent: #ef4444; /* Rojo tipo terminal */
         }
+        
         body {
-            font-family: system-ui, -apple-system, sans-serif;
             background-color: var(--bg);
             color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-        }
-        .card {
-            background: white;
-            padding: 3rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            text-align: center;
-            max-width: 500px;
-            width: 90%;
-        }
-        h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2rem;
-            color: #0f172a;
-        }
-        h2 {
-            margin: 0 0 1.5rem 0;
-            font-size: 1.1rem;
-            color: var(--primary);
-            font-weight: 500;
-        }
-        p {
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
             line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #475569;
         }
-        .links a {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background-color: var(--primary);
-            color: white;
+
+        .window {
+            background-color: #000000;
+            border: 1px solid #27272a;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 760px;
+            padding: 24px 32px;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Botones estilo macOS de la referencia */
+        .mac-dots {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            gap: 6px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot.red { background-color: #ff5f56; }
+        .dot.yellow { background-color: #ffbd2e; }
+        .dot.green { background-color: #27c93f; }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+
+        /* Arte ASCII simulando el avatar pixelado */
+        .ascii-art {
+            font-size: 9px;
+            line-height: 9px;
+            letter-spacing: 1px;
+            color: #52525b;
+            white-space: pre;
+            user-select: none;
+        }
+
+        .text-block p {
+            margin: 0 0 16px 0;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: var(--white);
+        }
+
+        .footer {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text);
+        }
+
+        .nav-links a {
+            color: var(--text);
             text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 500;
-            transition: background-color 0.2s;
+            transition: color 0.2s;
         }
-        .links a:hover {
-            background-color: #1d4ed8;
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 15px;
+            background-color: var(--accent);
+            vertical-align: middle;
+            animation: blink 1s step-end infinite;
+            margin-left: 4px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Sebastián Villegas</h1>
-        <h2>Analista de Sistemas & Desarrollador</h2>
-        <p>Especialista en gestión de datos, automatización y desarrollo de soluciones tecnológicas. Próximamente compartiendo proyectos y repositorios.</p>
-        <div class="links">
-            <a href="https://github.com/Zookeeperboy" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+
+    <div class="window">
+        <div class="mac-dots">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+
+        <div class="header">
+            <span>About [1/m]</span>
+            <span>index]</span>
+        </div>
+
+        <div class="content">
+            <div class="ascii-art">
+████████████████
+██░░░░░░░░░░░░██
+██░░████████░░██
+██░░██▓▓▓▓██░░██
+██░░██▓▓▓▓██░░██
+██░░████████░░██
+██░░░░░░░░░░░░██
+████████████████
+            </div>
+            
+            <div class="text-block">
+                <p><span class="highlight">Sebastián Villegas</span> es un Analista de Sistemas y Desarrollador con sede en Valdivia, Chile.</p>
+                
+                <p>Especializado en arquitecturas de datos (PostgreSQL, SAP B1 HANA) y construcción de aplicaciones web para la gestión logística utilizando Python y Flask.</p>
+                
+                <p>Actualmente desarrollando soluciones de trazabilidad industrial e integrando automatización de procesos mediante Power BI y HTMX<span class="cursor"></span></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span>v1.0.0</span>
+            <div class="nav-links">
+                <span style="color: var(--accent);">*</span> <a href="https://github.com/Zookeeperboy" target="_blank">github</a>
+                &nbsp;&nbsp;
+                <span style="color: var(--accent);">*</span> <a href="#" target="_blank">linkedin</a>
+                &nbsp;&nbsp;
+                <span style="color: var(--accent);">*</span> <a href="mailto:tu-correo@ejemplo.com">email</a>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
