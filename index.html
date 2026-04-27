@@ -11,7 +11,6 @@
             --white: #f4f4f5;
             --accent: #ef4444;
         }
-        
         body {
             background-color: var(--bg);
             color: var(--text);
@@ -25,7 +24,6 @@
             box-sizing: border-box;
             line-height: 1.6;
         }
-
         .window {
             background-color: #000000;
             border: 1px solid #27272a;
@@ -36,7 +34,6 @@
             position: relative;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-
         .mac-dots {
             position: absolute;
             top: 16px;
@@ -52,7 +49,6 @@
         .dot.red { background-color: #ff5f56; }
         .dot.yellow { background-color: #ffbd2e; }
         .dot.green { background-color: #27c93f; }
-
         .header {
             display: flex;
             justify-content: space-between;
@@ -61,13 +57,11 @@
             margin-top: 10px;
             margin-bottom: 30px;
         }
-
         .content {
             display: flex;
             gap: 30px;
             align-items: center;
         }
-
         @media (max-width: 800px) {
             .content {
                 flex-direction: column;
@@ -75,7 +69,6 @@
                 gap: 20px;
             }
         }
-
         .ascii-art {
             font-size: 10px;
             line-height: 11px;
@@ -83,28 +76,23 @@
             white-space: pre;
             user-select: none;
         }
-
         .text-block p {
             margin: 0 0 14px 0;
             font-size: 0.95rem;
         }
-        
         .list-item {
             margin-bottom: 6px;
             display: block;
         }
-
         .highlight {
             color: var(--white);
             font-weight: bold;
         }
-        
         .title {
             color: var(--accent);
             font-weight: bold;
             margin-top: 20px;
         }
-
         .footer {
             margin-top: 40px;
             display: flex;
@@ -112,17 +100,14 @@
             font-size: 0.85rem;
             color: var(--text);
         }
-
         .nav-links a {
             color: var(--text);
             text-decoration: none;
             transition: color 0.2s;
         }
-
         .nav-links a:hover {
             color: var(--white);
         }
-
         .cursor {
             display: inline-block;
             width: 8px;
@@ -132,7 +117,6 @@
             animation: blink 1s step-end infinite;
             margin-left: 4px;
         }
-
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
@@ -140,57 +124,51 @@
     </style>
 </head>
 <body>
-
     <div class="window">
         <div class="mac-dots">
             <div class="dot red"></div>
             <div class="dot yellow"></div>
             <div class="dot green"></div>
         </div>
-
         <div class="header">
             <span>About [1/m]</span>
             <span>index]</span>
         </div>
-
         <div class="content">
             <div class="ascii-art">
-                               ,--.
-                              /   \
-                              \   /
-                               : .
-                               | :
-                               | |
-                               | |
-    ..._ _...,----...___       | |
-  ,=""'   `             ```````\_|
- / '  ' \                        L
- \                                \
- (>                                \
-/                                   L
-\___.,---..___                       \
-    `--'      `_                      \
-                `.                     \
-                  `_ .                  `.._
-                 _,/ `_                     `_
-               ,'      `_                     |
-             /           `-Y     /`````--..,..___....---...___.  .
-            /       _.."   |    /                    :         \  '----...._   |
-           /     /`       /    /                     _,'        \           |  |
-           \   ,'        /    /                   ,,'            \         _|  |
-            \_,         ..._'                   _..--' '           \_    .'    |
-                       /                      ,`..__..'              `..`...'
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠠⣾⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣤⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⡿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⠋⠁⠀⠀⠈⠹⣿⣿⣿⣿⣿⡿⠋⠀⠀⠈⠻⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⣿⣿⠃⠀⠀⠀⣴⣶⡄⢹⣿⣿⣿⣿⠃⢰⣶⡄⠀⠀⣿⣿⣿⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⣿⣿⡆⠀⠀⠀⠹⠿⠁⣸⣿⣿⣿⣿⡀⠘⡿⠃⠀⢀⣿⣿⣿⡆⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⣯⣹⣿⣷⣤⣾⣿⣿⣿⣿⣿⣿⣃⣀⣀⣀⣀⠀
+⠀⠾⠿⠟⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠋⠉⠉⠋⠀
+⠠⣤⣤⣶⡶⠿⠛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠛⠛⠷⣶⡄
+⠀⠀⠉⢀⣠⣶⠾⠟⠉⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠛⠳⢶⣦⣄⡀⠀⠀
+⠀⠀⠀⠟⠋⠁⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠁⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
             </div>
             
             <div class="text-block">
                 <p><span class="highlight">Sebastián Villegas | Portafolio Profesional</span></p>
-                
                 <p>Es un Analista de Sistemas y Desarrollador en formación con sede en Valdivia, Chile.</p>
                 <p>Repositorio correspondiente al código fuente del portafolio personal y profesional, alojado en sebastianvillegas.cl.</p>
-                
                 <p class="title">■ Perfil Técnico</p>
                 <p>Analista de Sistemas en formación enfocado en la gestión de datos, automatización de procesos y desarrollo de soluciones web orientadas a la logística y control de inventarios.</p>
-                
                 <p class="title">■ Stack Tecnológico</p>
                 <p>
                     <span class="list-item"><span style="color: var(--accent);">></span> <strong>Desarrollo:</strong> Python (Flask, Jinja2), HTMX, HTML, CSS.</span>
@@ -199,16 +177,14 @@
                 </p>
             </div>
         </div>
-
         <div class="footer">
-            <span>v1.1.0</span>
+            <span>v1.2.0</span>
             <div class="nav-links">
-                <span style="color: var(--accent);">*</span> <a href="[https://github.com/Zookeeperboy](https://github.com/Zookeeperboy)" target="_blank">github</a>
+                <span style="color: var(--accent);">*</span> <a href="https://github.com/Zookeeperboy" target="_blank">github</a>
                 &nbsp;&nbsp;
                 <span style="color: var(--accent);">*</span> <a href="mailto:info@sebastianvillegas.cl">email</a>
             </div>
         </div>
     </div>
-
 </body>
 </html>
