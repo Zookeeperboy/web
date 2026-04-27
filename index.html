@@ -9,7 +9,7 @@
             --bg: #09090b;
             --text: #a1a1aa;
             --white: #f4f4f5;
-            --accent: #ef4444; /* Rojo tipo terminal */
+            --accent: #ef4444;
         }
         
         body {
@@ -31,13 +31,12 @@
             border: 1px solid #27272a;
             border-radius: 8px;
             width: 100%;
-            max-width: 760px;
+            max-width: 900px;
             padding: 24px 32px;
             position: relative;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
 
-        /* Botones estilo macOS de la referencia */
         .mac-dots {
             position: absolute;
             top: 16px;
@@ -60,16 +59,16 @@
             color: var(--accent);
             font-size: 0.85rem;
             margin-top: 10px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .content {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             align-items: center;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
             .content {
                 flex-direction: column;
                 align-items: flex-start;
@@ -77,27 +76,37 @@
             }
         }
 
-        /* Arte ASCII simulando el avatar pixelado */
         .ascii-art {
-            font-size: 9px;
-            line-height: 9px;
-            letter-spacing: 1px;
+            font-size: 10px;
+            line-height: 11px;
             color: #52525b;
             white-space: pre;
             user-select: none;
         }
 
         .text-block p {
-            margin: 0 0 16px 0;
+            margin: 0 0 14px 0;
             font-size: 0.95rem;
+        }
+        
+        .list-item {
+            margin-bottom: 6px;
+            display: block;
         }
 
         .highlight {
             color: var(--white);
+            font-weight: bold;
+        }
+        
+        .title {
+            color: var(--accent);
+            font-weight: bold;
+            margin-top: 20px;
         }
 
         .footer {
-            margin-top: 50px;
+            margin-top: 40px;
             display: flex;
             justify-content: space-between;
             font-size: 0.85rem;
@@ -146,33 +155,57 @@
 
         <div class="content">
             <div class="ascii-art">
-████████████████
-██░░░░░░░░░░░░██
-██░░████████░░██
-██░░██▓▓▓▓██░░██
-██░░██▓▓▓▓██░░██
-██░░████████░░██
-██░░░░░░░░░░░░██
-████████████████
+                               ,--.
+                              /   \
+                              \   /
+                               : .
+                               | :
+                               | |
+                               | |
+    ..._ _...,----...___       | |
+  ,=""'   `             ```````\_|
+ / '  ' \                        L
+ \                                \
+ (>                                \
+/                                   L
+\___.,---..___                       \
+    `--'      `_                      \
+                `.                     \
+                  `_ .                  `.._
+                 _,/ `_                     `_
+               ,'      `_                     |
+             /           `-Y     /`````--..,..___....---...___.  .
+            /       _.."   |    /                    :         \  '----...._   |
+           /     /`       /    /                     _,'        \           |  |
+           \   ,'        /    /                   ,,'            \         _|  |
+            \_,         ..._'                   _..--' '           \_    .'    |
+                       /                      ,`..__..'              `..`...'
             </div>
             
             <div class="text-block">
-                <p><span class="highlight">Sebastián Villegas</span> es un Analista de Sistemas y Desarrollador con sede en Valdivia, Chile.</p>
+                <p><span class="highlight">Sebastián Villegas | Portafolio Profesional</span></p>
                 
-                <p>Especializado en arquitecturas de datos (PostgreSQL, SAP B1 HANA) y construcción de aplicaciones web para la gestión logística utilizando Python y Flask.</p>
+                <p>Es un Analista de Sistemas y Desarrollador en formación con sede en Valdivia, Chile.</p>
+                <p>Repositorio correspondiente al código fuente del portafolio personal y profesional, alojado en sebastianvillegas.cl.</p>
                 
-                <p>Actualmente desarrollando soluciones de trazabilidad industrial e integrando automatización de procesos mediante Power BI y HTMX<span class="cursor"></span></p>
+                <p class="title">■ Perfil Técnico</p>
+                <p>Analista de Sistemas en formación enfocado en la gestión de datos, automatización de procesos y desarrollo de soluciones web orientadas a la logística y control de inventarios.</p>
+                
+                <p class="title">■ Stack Tecnológico</p>
+                <p>
+                    <span class="list-item"><span style="color: var(--accent);">></span> <strong>Desarrollo:</strong> Python (Flask, Jinja2), HTMX, HTML, CSS.</span>
+                    <span class="list-item"><span style="color: var(--accent);">></span> <strong>Bases de Datos:</strong> PostgreSQL, SQL (SAP B1 HANA).</span>
+                    <span class="list-item"><span style="color: var(--accent);">></span> <strong>Análisis y Automatización:</strong> Power BI, Microsoft Excel (VBA, Power Query).<span class="cursor"></span></span>
+                </p>
             </div>
         </div>
 
         <div class="footer">
-            <span>v1.0.0</span>
+            <span>v1.1.0</span>
             <div class="nav-links">
-                <span style="color: var(--accent);">*</span> <a href="https://github.com/Zookeeperboy" target="_blank">github</a>
+                <span style="color: var(--accent);">*</span> <a href="[https://github.com/Zookeeperboy](https://github.com/Zookeeperboy)" target="_blank">github</a>
                 &nbsp;&nbsp;
-                <span style="color: var(--accent);">*</span> <a href="#" target="_blank">linkedin</a>
-                &nbsp;&nbsp;
-                <span style="color: var(--accent);">*</span> <a href="mailto:tu-correo@ejemplo.com">email</a>
+                <span style="color: var(--accent);">*</span> <a href="mailto:info@sebastianvillegas.cl">email</a>
             </div>
         </div>
     </div>
