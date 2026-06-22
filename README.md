@@ -9,6 +9,6 @@ Analista de Sistemas enfocado en la gestión de datos, automatización de proces
 Stack Tecnológico
 
 Desarrollo: Python (Flask, Jinja2), HTMX, HTML, CSS.
-Bases de Datos: PostgreSQL, SQL (SAP B1 HANA).
+Bases de Datos: PostgreSQL, SQL.
 Análisis y Automatización: Power BI, Microsoft Excel (VBA, Power Query).
 
